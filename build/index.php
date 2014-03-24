@@ -7,7 +7,7 @@
 
 <body>
         
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
+        <form action="" method="get">
             
             <label for="name">Name</label>
             <input type="text" id="name" name="name" minlength="2"/>
