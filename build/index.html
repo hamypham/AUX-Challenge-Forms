@@ -2,22 +2,117 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Hamy - AUX Form Challenge</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css" media="screen" title="no title">
+
+    <link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
+
+<div id="wrapper">
+	<header role="banner">
+			<h1>Sign up for Whoo!</h1>
+			<h2>50 projects, 500 images, 10 videos, domain binding, and technical support.</h2>
+	</header>
+
+    <form role="form" action="" method="get">
+
+        	<fieldset class="section-1">
+				<legend>First, name your portfolio</legend>
+				
+				<div class="form row 1">
+					<label for="portfolio-title">Portfolio title</label>
+					<input type="text" id="portfolio-title" name="portfolio-title" required aria-required="true">
+             
+					<label for="portfolio-address">Portfolio address</label>
+					<input type="text" id="portfolio-address" name="portfolio-address" required aria-required="true" aria-labelledby="portfolio-address portfolio-note">
+					<span id="portfolio-note">.sample.com</span>
+				</div>				
+			</fieldset> <!------------end-Section-1-fieldset------------>
+
+			<fieldset class="section-2">
+				<legend>Now, enter your account details</legend>
+				
+				<div class="form row 2">
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name" required aria-required="true">
+					
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-note">
+					<span id="email-note">NOTE: We'll never share your email, promise.</span>
+
+					<label for=password>Password</label>
+					<input type="password" id="password" name="password" required aria-required="true">
+				</div>
+			</fieldset> <!------------end-Section-2-fieldset------------>
+
+			<fieldset class="section-3">
+				<legend>Finally, enter your payment information</legend>
+
+				<div class="form row 4">
+					<label for=card-number>Card number</label>
+					<input type="tel" pattern="[0-9]{13,16}" id="card-number" name="card-number" required aria-required="true" autocomplete="off">				
+				
+					<fieldset class="credit-buttons">				  	
+					  	<label class="americanexpress-button" for="americanexpress"><input type="radio" name="card-type" value="americanexpress" id="americanexpress-button">American Express</label>
+					  	
+					  	<label class="visa-button" for="visa"><input type="radio" name="card-type" value="visa" id="visa-button">Visa</label>
+					  	
+					  	<label class="discover-button" for="discover"><input type="radio" name="card-type" value="discover" id="discover-button">Discover</label>
+					  	
+					  	<label class="mastercard-button" for="mastercard"><input type="radio" name="card-type" value="mastercard" id="mastercard-button">Mastercard</label>
+					</fieldset>
+			
+					<label for="security-code">Security code</label>
+					<input type="tel" pattern="[0-9]{3,4}" maxlength="4" id="security-code" name="security-code" required aria-required="true" aria-describedby="cvv1-note cvv2-note">
+					<span id="cvv1"></span>
+					<span class="hidden" id="cvv1-note">This is a 3 digit code on the back of your Visa, Discover, or Mastercard credit card</span>
+					<span id="cvv2"></span>
+					<span class="hidden" id="cvv2-note">This is a 4 digit code on the front of your American Express credit card</span>
+
+				<fieldset class="expiration">
+					<label class="expiration-date" for="expiration-date">Expiration date</label>
+
+					<select class="expiration-month" name="expiration-month">
+					<option value="0" disabled selected>Month</option>
+                    <option value="1">January</option>
+					<option value="2">February</option>
+					<option value="3">March</option>
+					<option value="4">April</option>
+					<option value="5">May</option>
+					<option value="6">June</option>
+					<option value="7">July/option>
+					<option value="8">August</option>
+					<option value="9">September</option>
+					<option value="10">October</option>
+					<option value="11">November</option>
+					<option value="12">December</option>
+					</select>
+						
+					<select class="expiration-year" name="expiration-year">
+                    <option value="0" disabled selected>Year</option>
+					<option value="1">2014</option>
+					<option value="2">2015</option>
+					<option value="3">2016</option>
+					<option value="4">2017</option>
+					<option value="5">2018</option>
+					<option value="6">2019</option>
+					<option value="7">2020</option>
+					</select>
+				</fieldset>
+                    
+                <a href="" class="secure-lock" aria-describedby="secure-form-note"></a>															
+				<span class="hidden" id="secure-form-note">This form is secure</span>
+
+				</div> <!------------form-row-4-div------------>
+			</fieldset> <!------------end-Section-3-fieldset------------>
         
-        <form action="" method="get">
+            <button type="submit" name="send">Create your portfolio</button>
             
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" minlength="2"/>
-            
-            <label for="name">E-mail</label>
-            <input type="email" id="email" name="email" minlength="2"/>
-            
-            <button type="submit" name="send">Send!</button>
-            
-        </form>
+    </form>
+</div>
 
 </body>
 </html>

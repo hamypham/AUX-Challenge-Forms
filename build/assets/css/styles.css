@@ -1,0 +1,318 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------------End-of-Reset-------------------*/
+
+body {
+    background-color: #b3e3ff;
+	counter-reset:legend;
+}
+
+#wrapper {
+	width: 700px;
+	height: 1250px;
+	margin: auto;
+	display: block;
+}
+
+header {
+	background-color: #146e88;
+	padding: 30px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	
+}
+
+form {
+	background-color: #ffffff;
+	padding-bottom: 10px;
+}
+
+h1 {
+	font-family: 'Antic Slab', serif;
+	font-size: 2em;
+	color: #ffffff;
+	margin-left: 15px;
+}
+
+h2 {
+	font-family: Lucida Grande, Arial, Verdana, sans-serif;
+	font-size: .75em;
+	color: #b3e3ff;
+	margin-left: 15px;
+	line-height: 2.25em;
+}
+
+legend {
+	font-family: 'Antic Slab', serif;
+	font-size: 1.25em;
+	color: #146e88;
+	background-color: #ffffff;
+	width: 500px;
+	counter-increment: legend;
+	padding-top: 25px;
+}
+
+legend:before {
+  content: counter(legend);
+  display: inline-block;
+  padding: 5px;
+  background: #52a3d4;
+  width: 20px;
+  text-align: center;
+  color: white;
+	border-radius: 100px;
+	border: 5px solid #ffffff;
+	margin-left: -20px;
+	margin-right: 27px;
+}
+
+
+label {
+	font-family: Lucida Grande, Arial, Verdana, sans-serif;
+	color: #5c5c5c;
+	font-size: .725em;
+	margin-left: 22px;
+	margin-top: 20px;
+	margin-bottom: 8px;
+	display: block;
+}
+
+input {
+	width: 500px;
+	height: 30px;
+	border-radius: 5px;
+	margin: auto;
+	display: block;
+	box-shadow: inset 0px 1px 3px #adadad;
+	-webkit-appearance: caret;
+	-moz-appearance: caret;
+}
+
+
+span {
+	font-family: Lucida Grande, Arial, Verdana, sans-serif;
+	color: #919191;
+	font-size: .725em;
+}
+
+#portfolio-address {
+	margin-left: 22px;
+	width: 375px;
+	float: left;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+	box-shadow: inset 0px 1px 3px #adadad;
+	-webkit-appearance: caret;
+	-moz-appearance: caret;
+}
+
+.section-1 span {
+	font-weight: bold;
+	padding: 10px 25px 10px 25px;
+	background-color: #fff;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: inset 0px 1px 3px;
+	float: left;
+	margin-top: 2px;
+}
+
+.section-2 span {
+	margin: 20px 0px 0px 22px;
+}
+
+#security-code {
+	width: 75px;
+	float: left;
+	margin-left: 20px;
+}
+
+#card-number {
+	width: 300px;
+	float: left;
+	margin-left: 20px;
+}
+
+select {
+	margin-left: 22px;
+}
+
+.row {
+	width: 550px;
+	margin: auto;
+	background-color: #f3f5f5;
+	padding: 30px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.credit-buttons input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 45px;
+	height: 32px;
+}
+
+.credit-buttons label {
+	display: inline-block;
+	margin: 0px;
+	vertical-align: bottom;
+	font-size: 0px;
+	margin-top: 2px;
+}
+
+/*----------------Start-credit-cards-radio-buttons-------------------*/
+
+.americanexpress-button {
+    background: url('/assets/images/sprite.png') no-repeat 0 -206px;
+	width: 45px;
+	height: 32px;
+}
+
+.americanexpress-button input:checked, .americanexpress-button input:hover {
+	background: url('/assets/images/sprite.png') no-repeat 0 -122px;
+	width: 45px;
+	height: 32px;
+}
+
+.visa-button {
+	background: url('/assets/images/sprite.png') no-repeat -48px -164px;
+	width: 45px;
+	height: 32px;
+}
+
+.visa-button input:checked, .visa-button input:hover {
+	background: url('/assets/images/sprite.png') no-repeat -48px -122px;
+	width: 45px;
+	height: 32px;
+}
+
+.discover-button {
+	background: url('/assets/images/sprite.png') no-repeat -96px -206px;
+	width: 45px;
+	height: 32px;
+}
+
+.discover-button input:checked, .discover-button input:hover {
+	background: url('/assets/images/sprite.png') no-repeat -96px -122px;
+	width: 45px;
+	height: 32px;
+}
+
+.mastercard-button {
+	background: url('/assets/images/sprite.png')no-repeat -144px -206px;
+	width: 45px;
+	height: 32px;
+}
+
+.mastercard-button  input:checked, .mastercard-button input:hover {
+	background: url('/assets/images/sprite.png') no-repeat -144px -122px;
+	width: 45px;
+	height: 32px;
+}
+
+/*----------------End-credit-cards-radio-buttons-------------------*/
+
+#cvv1 {
+	background: url('/assets/images/sprite.png') no-repeat 0px -374px;
+	width: 62px;
+	height: 32px;
+	vertical-align: bottom;
+	display: inline-block;
+}
+
+#cvv2 {
+	background: url('/assets/images/sprite.png') no-repeat 0 -331px;
+	width: 70px;
+	height: 33px;
+	vertical-align: bottom;
+	display: inline-block;
+}
+
+
+.expiration select {
+   	border: 1px solid #bcbcbc;
+   	height: 25px;
+}
+
+.secure-lock {
+    background: url('/assets/images/sprite.png') no-repeat -60px -499px;
+	width: 14px;
+	height: 19px;
+    float: right;
+    margin: 0;
+}
+
+.hidden {
+	position: absolute; 
+	overflow: hidden; 
+	clip: rect(0 0 0 0); 
+	height: 1px; width: 1px; 
+	margin: -1px; padding: 0; border: 0;
+}
+
+
+button {
+	font-family: 'Antic Slab', serif;
+	font-size: 1em;
+	color: #ffffff;
+	background-color: #819e2d;
+	width: 225px;
+	height: 40px;
+	margin: 30px auto;
+	border-radius: 5px;
+	display: block;
+}
+
+
+
+
+
+
