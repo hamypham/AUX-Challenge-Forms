@@ -131,8 +131,8 @@ input {
 	margin: auto;
 	display: block;
 	box-shadow: inset 0px 1px 3px #adadad;
-	-webkit-appearance: caret;
-	-moz-appearance: caret;
+	/*-webkit-appearance: caret;
+	-moz-appearance: caret;*/
 }
 
 
@@ -148,9 +148,9 @@ span {
 	float: left;
 	border-bottom-right-radius: 0px;
 	border-top-right-radius: 0px;
-	box-shadow: inset 0px 1px 3px #adadad;
-	-webkit-appearance: caret;
-	-moz-appearance: caret;
+	/*box-shadow: inset 0px 1px 3px #adadad;*/
+	/*-webkit-appearance: caret;
+	-moz-appearance: caret;*/
 }
 
 .section-1 span {
@@ -160,8 +160,9 @@ span {
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	box-shadow: inset 0px 1px 3px;
-	float: left;
+	float: right;
 	margin-top: 2px;
+	margin-right: 21px;
 }
 
 .section-2 span {
@@ -311,7 +312,27 @@ button {
 	display: block;
 }
 
+/*----------------JQuery-validation-errors-styling-------------------*/
 
+.error {
+	color: green;
+	font-weight: bold;
+}
+
+#security-code + label {
+	width: 100%;
+	float: left;
+}
+
+#card-number + label {
+	width: 100%;
+	float: left;
+}
+
+#portfolio-address + label {
+	width: 100%;
+	float: left;
+}
 
 
 
