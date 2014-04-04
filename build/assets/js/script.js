@@ -1,3 +1,7 @@
+
+/* wrap everything in an anonymous function to contain the variables */
+(function(){
+	
 function getCreditCardType(accountNumber)
 	{
 		var type;
@@ -71,3 +75,18 @@ $ ("#card-number") .on ("keyup blur", function(){
 	switchCard (selectCard);
 	
 });
+
+(function ($) {
+
+	// check for "required" input support with modernizr
+	if (!Modernizr.input.required) {
+
+		// call jQuery validate plugin on each form
+		$('whoo-form').load('assets/js/jquery.js');
+		$('whoo-form').load('assets/js/lib/jquery.validate.min.js');
+		$('whoo-form').load('assets/js/jqueryValidation.js');
+		} 
+		
+	});
+
+}(jQuery));

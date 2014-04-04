@@ -155,13 +155,12 @@ span {
 
 .section-1 span {
 	font-weight: bold;
-	padding: 10px 25px 10px 25px;
+	padding: 12px 25px 12px 25px;
 	background-color: #fff;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	box-shadow: inset 0px 1px 3px;
 	float: right;
-	margin-top: 2px;
 	margin-right: 21px;
 }
 
