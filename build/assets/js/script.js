@@ -1,7 +1,8 @@
 
 /* wrap everything in an anonymous function to contain the variables */
-(function(){
-	
+;(function($){
+
+
 function getCreditCardType(accountNumber)
 	{
 		var type;
@@ -42,26 +43,26 @@ function switchCard (selectCard) {
 				
 				case "amex":
 				$("#americanexpress-button").prop("checked", true);
-				$("#cvv1").hide();
-				$("#cvv2").show();
+				$("#cvv").hide();
+				$("#cvv-amex").show();
 				break;
 
 				case "visa":
 				$("#visa-button").prop("checked", true);
-				$("#cvv2").hide();
-				$("#cvv1").show();
+				$("#cvv-amex").hide();
+				$("#cvv").show();
 				break;
 
 				case "mastercard":
 				$("#mastercard-button").prop("checked", true);
-				$("#cvv2").hide();
-				$("#cvv1").show();
+				$("#cvv-amex").hide();
+				$("#cvv").show();
 				break;
 
 				case "discover":
 				$("#discover-button").prop("checked", true);
-				$("#cvv2").hide();
-				$("#cvv1").show();
+				$("#cvv-amex").hide();
+				$("#cvv").show();
 				break;
 					
 		};
@@ -76,17 +77,16 @@ $ ("#card-number") .on ("keyup blur", function(){
 	
 });
 
-(function ($) {
+(function () {
 
-	// check for "required" input support with modernizr
-	if (!Modernizr.input.required) {
+	Modernizr.load ([
+		{
+		test: Modernizr.input.required,
+		nope: ['assets/js/lib/jquery.validate.min.js', 'assets/js/jqueryValidation.js']
+		}
+	]);
 
-		// call jQuery validate plugin on each form
-		$('whoo-form').load('assets/js/jquery.js');
-		$('whoo-form').load('assets/js/lib/jquery.validate.min.js');
-		$('whoo-form').load('assets/js/jqueryValidation.js');
-		} 
-		
-	});
+})();
+
 
 }(jQuery));

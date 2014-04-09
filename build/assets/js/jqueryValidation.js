@@ -41,6 +41,7 @@
         }
     };
 
+
     // Specify validation error messages
     validateMessages = {
         portfolio_title: "Please enter a portfolio title",
@@ -63,17 +64,15 @@
     };
 
     $(document).ready( function () {
-        $("#whoo-form").validate({rules: validateOptions, messages: validateMessages});
+        $(".whoo-form").validate({rules: validateOptions, messages: validateMessages, highlight:errorAria});
     });
 
 
-    // highlight:function(element, errorClass) {
+    function errorAria (element, errorClass) {
 
-    //         $("."+errorClass).attr("aria-atomic", true).attr("aria-live", "polite");
+            $(".error").attr("aria-atomic", true).attr("aria-live", "polite");
 
-    //     }
-
-    // });
+        }
 
     
 })(jQuery);
