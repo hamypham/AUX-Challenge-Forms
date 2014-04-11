@@ -158,6 +158,7 @@ h2 {
 }
 
 #portfolio-note {
+	cursor: pointer;
 	font-size: .725em;
 	font-weight: bold;
 	color: #919191;
