@@ -1,3 +1,8 @@
+
+/* wrap everything in an anonymous function to contain the variables */
+;(function($){
+
+
 function getCreditCardType(accountNumber)
 	{
 		var type;
@@ -38,26 +43,26 @@ function switchCard (selectCard) {
 				
 				case "amex":
 				$("#americanexpress-button").prop("checked", true);
-				$("#cvv1").hide();
-				$("#cvv2").show();
+				$("#cvv").hide();
+				$("#cvv-amex").show();
 				break;
 
 				case "visa":
 				$("#visa-button").prop("checked", true);
-				$("#cvv2").hide();
-				$("#cvv1").show();
+				$("#cvv-amex").hide();
+				$("#cvv").show();
 				break;
 
 				case "mastercard":
 				$("#mastercard-button").prop("checked", true);
-				$("#cvv2").hide();
-				$("#cvv1").show();
+				$("#cvv-amex").hide();
+				$("#cvv").show();
 				break;
 
 				case "discover":
 				$("#discover-button").prop("checked", true);
-				$("#cvv2").hide();
-				$("#cvv1").show();
+				$("#cvv-amex").hide();
+				$("#cvv").show();
 				break;
 					
 		};
@@ -71,3 +76,17 @@ $ ("#card-number") .on ("keyup blur", function(){
 	switchCard (selectCard);
 	
 });
+
+(function () {
+
+	Modernizr.load ([
+		{
+		test: Modernizr.input.required,
+		nope: ['assets/js/lib/jquery.validate.min.js', 'assets/js/jqueryValidation.js']
+		}
+	]);
+
+})();
+
+
+}(jQuery));

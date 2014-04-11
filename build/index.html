@@ -9,139 +9,137 @@
     <link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
 
     <script src="assets/js/lib/modernizr.js"></script>
-
-	<script>
-               Modernizr.load({
-                 test: Modernizr.input.password,
-                 yep: function() {
-                   console.log("please work?");
-               },
-                 nope: function() {
-                   console.log("work please?");
-                 }
-               });
-         
-	</script>
-
 </head>
 
 <body>
 
-<div id="wrapper">
-	<header role="banner">
+<div class="wrapper">
+
+	<header class="header" role="banner">
 			<h1>Sign up for Whoo!</h1>
 			<h2>50 projects, 500 images, 10 videos, domain binding, and technical support.</h2>
 	</header>
-
-    <form role="form" id="whoo-form" action="" method="get">
-
-        	<fieldset class="section-1">
-				<legend>First, name your portfolio</legend>
+    
+	<form role="form" class="whoo-form" action="" method="get">
+        	<fieldset class="section">
+				<legend class="section_legend">First, name your portfolio</legend>
 				
-				<div class="form row 1">
-					<label for="portfolio-title">Portfolio title</label>
-					<input type="text" id="portfolio-title" name="portfolio_title" pattern="{2,}" required aria-required="true">
+				<div class="formrow">
+					<label class="input-label" for="portfolio-title">Portfolio title</label>
+					<input class="input-box" type="text" id="portfolio-title" name="portfolio_title" pattern="{2,}" required aria-required="true">
 
-             
-					<label for="portfolio-address">Portfolio address</label>
-					<span id="portfolio-note">.sample.com</span>
-					<input type="text" id="portfolio-address" name="portfolio_address" pattern="{2,}" required aria-required="true" aria-labelledby="portfolio-address portfolio-note">
+             		<label id="portfolio-note">.sample.com</label>
+					<label class="input-label" for="portfolio-address">Portfolio address</label>
+					<input class="input-box" type="text" id="portfolio-address" name="portfolio_address" pattern="{2,}" required aria-required="true" aria-labelledby="portfolio-address portfolio-note">
 					
-			
-
+					
 				</div>				
 			</fieldset> <!--end-Section-1-fieldset-->
 
-			<fieldset class="section-2">
-				<legend>Now, enter your account details</legend>
+			<fieldset class="section">
+				<legend class="section_legend">Now, enter your account details</legend>
 				
-				<div class="form row 2">
-					<label for="name">Name</label>
-					<input type="text" id="name" name="name" required aria-required="true">
+				<div class="formrow">
+					<label class="input-label" for="name">Name</label>
+					<input class="input-box" type="text" id="name" name="name" required aria-required="true">
 					
-					<label for="email">Email</label>
-					<input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-note">
-					<span id="email-note">NOTE: We'll never share your email, promise.</span>
+					<label class="input-label" for="email">Email</label>
+					<input class="input-box" type="email" id="email" name="email" required aria-required="true" aria-describedby="email-note">
+					<label class="input-label" id="email-note">NOTE: We'll never share your email, promise.</label>
 
-					<label for=password>Password</label>
-					<input type="password" id="password" name="password" required aria-required="true">
+					<label class="input-label" for="password">Password</label>
+					<input class="input-box" type="password" id="password" name="password" required aria-required="true">
 				</div>
 			</fieldset> <!--end-Section-2-fieldset-->
 
-			<fieldset class="section-3">
-				<legend>Finally, enter your payment information</legend>
+			<fieldset class="section">
 
-				<div class="form row 4">
-					<label for=card-number>Card number</label>
-					<input type="tel" pattern="[0-9]{13,16}" id="card-number" name="card_number" required aria-required="true" autocomplete="off">				
+				<a id="paypal" href="https://www.paypal.com/home">Use Paypal</a>
+				<label class="hidden" for="paypal">Paypal payment option</label>
+				
+				<legend class="section_legend">Finally, enter your payment information</legend>
+
+
+
+				<div class="formrow">
+					<label class="input-label" for="card-number">Card number</label>
+					<input class="input-box" type="text" pattern="[0-9]{13,16}" id="card-number" name="card_number" required aria-required="true" autocomplete="off">				
 				
 					<fieldset class="credit-buttons">				  	
-					  	<label class="americanexpress-button" for="americanexpress"><input type="radio" name="card-type" value="americanexpress" id="americanexpress-button">American Express</label>
+					  	<input type="radio" name="card-type" value="americanexpress" id="americanexpress-button">
+					  	<label class="hidden" for="americanexpress-button">American Express</label>
 					  	
-					  	<label class="visa-button" for="visa"><input type="radio" name="card-type" value="visa" id="visa-button">Visa</label>
+					  	<input type="radio" name="card-type" value="visa" id="visa-button">
+					  	<label class="hidden" for="visa-button">Visa</label>
 					  	
-					  	<label class="discover-button" for="discover"><input type="radio" name="card-type" value="discover" id="discover-button">Discover</label>
+					  	<input type="radio" name="card-type" value="discover" id="discover-button">
+					  	<label class="hidden" for="discover-button">Discover</label>
 					  	
-					  	<label class="mastercard-button" for="mastercard"><input type="radio" name="card-type" value="mastercard" id="mastercard-button">Mastercard</label>
+					  	<input type="radio" name="card-type" value="mastercard" id="mastercard-button">
+					  	<label class="hidden" for="mastercard-button">Mastercard</label>
 					</fieldset>
 			
-					<label for="security-code">Security code</label>
-					<input type="tel" pattern="[0-9]{3,4}" id="security-code" name="security_code" required aria-required="true" aria-describedby="cvv-note">
-					<span class="hidden" id="cvv-note">Card Verification Value. A 3 digit code on Visa, MasterCard and Discover credit cards. A 4 digit code on American Express credit cards.</span>
-					<span id="cvv1" aria-describedby="cvv1-note"></span>
-					<span class="hidden" id="cvv1-note">This is a 3 digit code on the back of your Visa, Discover, or Mastercard credit card</span>
-					<span id="cvv2" aria-describedby="cvv2-note"></span>
-					<span class="hidden" id="cvv2-note">This is a 4 digit code on the front of your American Express credit card</span>
+					<label class="input-label" for="security-code">Security code</label>
+					<input class="input-box" type="text" pattern="[0-9]{3,4}" id="security-code" name="security_code" required aria-required="true" aria-describedby="credit-cvv-note">
+					<label class="hidden" id="credit-cvv-note">Card Verification Value. A 3 digit code on Visa, MasterCard and Discover credit cards. A 4 digit code on American Express credit cards.</label>
 
-				<fieldset class="expiration">
-					<label class="expiration-date" for="expiration-date">Expiration date</label>
+					<div class="cvv-img">
+						<label id="cvv" aria-describedby="cvv-note"></label>
+						<label class="hidden" id="cvv-note">This is a 3 digit code on the back of your Visa, Discover, or Mastercard credit card</label>
+						<label id="cvv-amex" aria-describedby="cvv-amex-note"></label>
+						<label class="hidden" id="cvv-amex-note">This is a 4 digit code on the front of your American Express credit card</label>
+					</div>
 
-					<select class="expiration-month" name="expiration_month" required aria-required="true">
-					<option value="0" disabled selected>Month</option>
-                    <option value="1">January</option>
-					<option value="2">February</option>
-					<option value="3">March</option>
-					<option value="4">April</option>
-					<option value="5">May</option>
-					<option value="6">June</option>
-					<option value="7">July</option>
-					<option value="8">August</option>
-					<option value="9">September</option>
-					<option value="10">October</option>
-					<option value="11">November</option>
-					<option value="12">December</option>
-					</select>
-						
-					<select class="expiration-year" name="expiration_year" required aria-required="true">
-                    <option value="0" disabled selected>Year</option>
-					<option value="1">2014</option>
-					<option value="2">2015</option>
-					<option value="3">2016</option>
-					<option value="4">2017</option>
-					<option value="5">2018</option>
-					<option value="6">2019</option>
-					<option value="7">2020</option>
-					</select>
-				</fieldset>
+					<fieldset class="expiration">
+						<legend class="input-label expiration-date" for="expiration-date">Expiration date</legend>
+
+						<select class="expiration-month" name="expiration_month" required aria-required="true" aria-labelledby="expiration-month-label">
+						<label class="hidden" id="expiration-month-label">This is your credit card's expiration month on the front of your card</label>
+						<option value="0" disabled selected>Month</option>
+	                    <option value="1">January</option>
+						<option value="2">February</option>
+						<option value="3">March</option>
+						<option value="4">April</option>
+						<option value="5">May</option>
+						<option value="6">June</option>
+						<option value="7">July</option>
+						<option value="8">August</option>
+						<option value="9">September</option>
+						<option value="10">October</option>
+						<option value="11">November</option>
+						<option value="12">December</option>
+						</select>
+							
+						<select class="expiration-year" name="expiration_year" required aria-required="true" aria-labelledby="expiration-year-label">
+						<label class="hidden" id="expiration-year-label">This is your credit card's expiration year on the front of your card</label>
+	                    <option value="0" disabled selected>Year</option>
+						<option value="1">2014</option>
+						<option value="2">2015</option>
+						<option value="3">2016</option>
+						<option value="4">2017</option>
+						<option value="5">2018</option>
+						<option value="6">2019</option>
+						<option value="7">2020</option>
+						</select>
+					</fieldset>
                     
-                <a href="" class="secure-lock" aria-describedby="secure-form-note"></a>														
-				<span class="hidden" id="secure-form-note">This form is secure</span>
+                <label id="secure-lock" aria-describedby="secure-form-note"></label>
+                <label class="hidden" id="secure-form-note">This form is secure</label>
 
 				</div> <!--form-row-4-div-->
 			</fieldset> <!--end-Section-3-fieldset-->
         
-            <button type="submit" name="send">Create your portfolio</button>
+            <button type="submit" name="send" aria-labelledby="submit-button">Create your portfolio</button>
+            <label class="hidden" id="submit-button">This button submits the form></label>
             
     </form>
-</div>
+</div> <!--wrapper-div-->
+
+
 
 <!-- JS -->
 <script src="assets/js/lib/jquery.js"></script>
 <script src="assets/js/script.js"></script>
-
-<!-- JQuery Validate -->
-<script src="assets/js/lib/jquery.validate.min.js"></script>
-<script src="assets/js/jquery.validation.js"></script>
 
 </body>
 </html>
